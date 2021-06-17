@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="nm"> 
+	<insert id="memberjoin" parameterType="naildto">
+		INSERT INTO NAIL(NID, NPASSWORD, NNAME, NEMAIL)
+			VALUES(#{nid},#{npassword},#{nname},#{nemail})
+	</insert>
+	
+	<select id="memberlogin" parameterType="naildto" resultType="String">
+		SELECT NID FROM NAIL WHERE NID=#{nid} AND NPASSWORD=#{npassword}
+	</select>
+ </mapper>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
